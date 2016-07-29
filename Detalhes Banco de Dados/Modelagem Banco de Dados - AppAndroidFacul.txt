@@ -1,0 +1,6 @@
+-Loggers { LoggerCodigo, LoggerStatus}
+-Projetos { ProjetoCodigo, SubprojetoCodigo, ProjetoNome, ProjetoDataInicial, ProjetoDataFinal, flSituacao}
+-Subprojetos { SubprojetoCodigo, SubprojetoNome, InstalacaoCodigo, SubprojetoDataInicial, SubprojetoDataFinal, flSituacao}
+-Instalaçoes { InstalacaoCodigo, LoggerCodigo, InstalacaoDataInicial, InstalacaoDataFinal, InstalacaoLatitude, InstalacaoLongitude, InstalacaoNumCasa, InstalacaoNomeRua, flSituacao, flVazamento}
+-InstalacoesSituacoes {InstalacaoSituacaoCodigo, IntalacaoCodigo}
+
