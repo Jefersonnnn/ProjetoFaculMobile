@@ -21,6 +21,19 @@ public class ActSplashScreen extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.act_splash_screen);
 
+        Animation anim = AnimationUtils.loadAnimation(this, R.anim.move_up);
+        ImageView imageView = (ImageView) findViewById(R.id.imgViewLogoScreen);
+        imageView.setAnimation(anim);
+
+        Handler handler = new Handler();
+        handler.postDelayed(new Runnable() {
+            @Override
+            public void run() {
+             startActivity(new Intent(ActSplashScreen.this, ActMain.class));
+                finish();
+            }
+        }, 4000);
+
 
     }
 }
