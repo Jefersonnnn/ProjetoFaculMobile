@@ -16,6 +16,14 @@
         android:contextClickable="true"
         android:layout_marginTop="50dp" />
 
+    <ProgressBar
+        style="?android:attr/progressBarStyleSmall"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:id="@+id/progressBar"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="20dp" />
+
     <ImageView
         android:layout_width="542dp"
         android:layout_height="269dp"

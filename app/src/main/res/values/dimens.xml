@@ -6,4 +6,8 @@
     <dimen name="activity_horizontal_margin">16dp</dimen>
     <dimen name="activity_vertical_margin">16dp</dimen>
     <dimen name="fab_margin">16dp</dimen>
+    <dimen name="lbl_margin_horizontal">8dp</dimen>
+    <dimen name="btn_margin_horizontal">8dp</dimen>
+    <dimen name="btn_margin_vertical">8dp</dimen>
+    <dimen name="edtText_margin_horizontal">8dp</dimen>
 </resources>
