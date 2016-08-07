@@ -9,6 +9,11 @@
     <string name="desclogoCaj">Logo Aguas de Joinville</string>
     <string name="hint_usuario">Usuário</string>
     <string name="hint_senha">Senha</string>
+    <string name="host">Host</string>
+    <string name="porta">Porta</string>
+    <string name="tabela">Tabela</string>
+    <string name="salvar">Salvar</string>
+    <string name="config">Configuraçoes de servidor</string>
 
 
 </resources>

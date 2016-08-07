@@ -1,4 +1,4 @@
-package univille.com.br.loggermarker.univille.com.br.loggermarker.view;
+package univille.com.br.loggermarker.view;
 
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;

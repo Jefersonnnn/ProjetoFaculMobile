@@ -1,4 +1,4 @@
-package univille.com.br.loggermarker.univille.com.br.loggermarker.view;
+package univille.com.br.loggermarker.view;
 
 import android.app.Activity;
 import android.content.Context;

@@ -1,10 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#033769</color>
-    <color name="colorPrimaryDark">#ffffff</color>
-    <color name="colorAccent">#003369</color>
-    <color name="btn_backgroudn">#003369</color>
-    <color name="app_bar_background">#053767</color>
-    <color name="edtText_background">#e6e2d7</color>
-    <color name="lbl_btn_texto">#ffffff</color>
+        <color name="primary">#03a9f4</color>
+        <color name="primary_dark">#0288d1</color>
+        <color name="primary_light">#B3E5FC</color>
+        <color name="accent">#607d8b</color>
+        <color name="primary_text">#212121</color>
+        <color name="secondary_text">#757575</color>
+        <color name="icons">#FFFFFF</color>
+        <color name="divider">#BDBDBD</color>
+
+        <color name="indigo">#4B0082</color>
+        <color name="pink">#FF1493</color>
+
+        <color name="btn_backgroudn">#003369</color>
+        <color name="app_bar_background">#053767</color>
+        <color name="edtText_background">#e6e2d7</color>
+        <color name="lbl_btn_texto">#ffffff</color>
 </resources>

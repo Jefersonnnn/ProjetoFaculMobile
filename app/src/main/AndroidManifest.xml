@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+<manifest
+    xmlns:android="http://schemas.android.com/apk/res/android"
     package="univille.com.br.loggermarker">
 
-    <!--
+     <!--
          The ACCESS_COARSE/FINE_LOCATION permissions are not required to use
          Google Maps Android API v2, but you must specify either coarse or fine
          location permissions for the 'MyLocation' functionality. 
@@ -27,8 +28,9 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+
         <activity
-            android:name=".univille.com.br.loggermarker.view.ActSplashScreen"
+            android:name=".view.ActSplashScreen"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -39,28 +41,41 @@
 
         <!-- Activity Principal MAIN CONTENT -->
         <activity
-            android:name=".univille.com.br.loggermarker.view.ActMain"
+            android:name=".view.ActMain"
             android:label="@string/app_name"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar">
+
+        </activity>
         <!-- FIM Activity Principal MAIN CONTENT -->
 
 
         <!-- Activity Principal LOGIN -->
         <activity
-            android:name=".univille.com.br.loggermarker.view.ActLogin"
+            android:name=".view.ActLogin"
             android:label="@string/app_name"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar">
+
+        </activity>
         <!-- FIM Activity Principal LOGIN -->
 
 
         <!-- Activity Principal LOGIN -->
         <activity
-            android:name=".univille.com.br.loggermarker.view.ActProjeto"
+            android:name=".view.ActProjeto"
             android:label="@string/app_name"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar">
+
+        </activity>
         <!-- FIM Activity Principal LOGIN -->
 
-        <activity android:name=".univille.com.br.loggermarker.view.ActSubProjeto"></activity>
+        <activity android:name=".view.ActSubProjeto">
+        </activity>
+
+    <!-- ATTENTION: This was auto-generated to add Google Play services to your project for
+     App Indexing.  See https://g.co/AppIndexing/AndroidStudio for more information. -->
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
     </application>
 
 </manifest>
