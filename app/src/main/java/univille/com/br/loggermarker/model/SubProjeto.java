@@ -9,7 +9,7 @@ public class SubProjeto{
     private int cdInstalacao;
     private Date dataInicial;
     private Date dataFinal;
-    private String situacaoSubProjeto;
+    private int situacaoSubProjeto;
 
     public int getCdSubProjeto(){
         return cdSubProjeto;
@@ -43,11 +43,11 @@ public class SubProjeto{
         this.dataFinal = dataFinal
     }
 
-    public String getSituacaoSubProjeto(){
+    public int getSituacaoSubProjeto(){
         return situacaoSubProjeto;
     }
 
-    public void setSituacaoSubProjeto(String situacaoSubProjeto){
+    public void setSituacaoSubProjeto(int situacaoSubProjeto){
         this.situacaoSubProjeto = situacaoSubProjeto;
     }
 }
