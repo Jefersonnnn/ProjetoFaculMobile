@@ -8,7 +8,7 @@ public class Projeto{
     private String nomeProjeto;
     private Date dataInicial;
     private Date dataFinal;
-    private String situacaoProjeto;
+    private int situacaoProjeto;
     private int cdSubProjeto;
 
     public int getCdProjeto(){
@@ -43,11 +43,11 @@ public class Projeto{
         this.dataFinal = dataFinal;
     }
 
-    public String getSituacaoProjeto(){
+    public int getSituacaoProjeto(){
         return situacaoProjeto;
     }
 
-    public void setSituacaoProjeto(String situacaoProjeto){
+    public void setSituacaoProjeto(int situacaoProjeto){
         this.situacaoProjeto = situacaoProjeto;
     }
 }
