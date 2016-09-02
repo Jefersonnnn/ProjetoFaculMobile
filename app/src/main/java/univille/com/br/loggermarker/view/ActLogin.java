@@ -21,7 +21,7 @@ import com.google.android.gms.common.api.GoogleApiClient;
 import univille.com.br.loggermarker.R;
 
 /**
- * Created by CASA on 05/08/2016.
+ * Created by Jeferson Machado on 05/08/2016.
  */
 public class ActLogin extends AppCompatActivity {
 
@@ -87,16 +87,18 @@ public class ActLogin extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                startActivity(new Intent(ActLogin.this, ActProjeto.class));
-                finish();
+                if(edtUsuario.getText().toString().equals("Jeferson") && edtSenha.getText().toString().equals("123")){
+                    startActivity(new Intent(ActLogin.this, ActProjeto.class));
+                    finish();
+                }else {
+                    Toast.makeText(ActLogin.this, "Usuario/Senha errado!", Toast.LENGTH_LONG).show();
 
+                }
             }
         });
 
         //Recupera as preferencias do usuarios, caso exista;
         recuperarPreferenciasLogin();
-
-
     }
 
     @Override
