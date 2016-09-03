@@ -14,6 +14,7 @@ import java.util.List;
 
 import univille.com.br.loggermarker.R;
 import univille.com.br.loggermarker.model.Instalacao;
+import univille.com.br.loggermarker.model.Projeto;
 
 /**
  * Created by Jeferson Machado on 26/08/2016.
@@ -52,10 +53,16 @@ public class InstalacaoAdapter extends RecyclerView.Adapter<InstalacaoAdapter.My
         return mList.size();
     }
 
+    public Instalacao getItem(int position){
+        return mList.get(position);
+    }
+
     public void addListItem(Instalacao i, int position){
         mList.add(i);
         notifyItemInserted(position);
     }
+
+
 
     public class MyViewHolder extends RecyclerView.ViewHolder{
         public ImageView ivInstalacao;

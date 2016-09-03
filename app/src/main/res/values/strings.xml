@@ -18,6 +18,8 @@
     <string name="config">Configuraçoes de servidor</string>
     <string name="retirado">Retirado</string>
     <string name="instalado">Instalado</string>
-
+    <string name="cancelar">cancelar</string>
+    <string name="adicionar_novo_projeto">Adicionar Novo Projeto</string>
+    <string name="adicionar_novo_sub_projeto">Adicionar novo Sub-Projeto</string>
 
 </resources>

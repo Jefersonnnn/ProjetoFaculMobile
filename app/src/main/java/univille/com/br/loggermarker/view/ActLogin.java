@@ -27,10 +27,11 @@ public class ActLogin extends AppCompatActivity {
 
     private EditText edtUsuario, edtSenha;
     private Button btnLogin;
-    private Dialog configuracoesDialog;
+
 
     //JANELA DE CONFIGURACOES
     //res/layout/form_config_login.xml
+    private Dialog configuracoesDialog;
     private EditText edtHost, edtPort, edtTable;
     private Button btnSalvar;
 
@@ -61,6 +62,7 @@ public class ActLogin extends AppCompatActivity {
 
         //// Find the toolbar view inside the activity layout
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        toolbar.setTitle("Login");
         // Sets the Toolbar to act as the ActionBar for this Activity window.
         // Make sure the toolbar exists in the activity and is not null
         setSupportActionBar(toolbar);

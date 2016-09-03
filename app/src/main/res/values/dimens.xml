@@ -7,9 +7,25 @@
     <dimen name="activity_vertical_margin">16dp</dimen>
     <dimen name="fab_margin">16dp</dimen>
     <dimen name="lbl_margin_horizontal">8dp</dimen>
+
+
+    <!-- DIMEN DOS BOTOES -->
     <dimen name="btn_margin_horizontal">8dp</dimen>
     <dimen name="btn_margin_vertical">8dp</dimen>
+    <dimen name="btn_height">48dp</dimen>
+    <dimen name="btn_min_width">88dp</dimen>
+    <dimen name="btn_text_left_right_padding">16dp</dimen>
+    <dimen name="btn_corner_radius">2dp</dimen>
+    <dimen name="btn_text_size">14sp</dimen>
+    <dimen name="btn_elevation">2dp</dimen>
+
+
+
     <dimen name="edtText_margin_horizontal">8dp</dimen>
-    <dimen name="txt_listas_principal">24sp</dimen>
-    <dimen name="txt_listas_secundario">16sp</dimen>
+
+
+    <!-- DIMEN DOS TEXTOS -->
+    <dimen name="txt_listas_principal">16sp</dimen>
+    <dimen name="txt_listas_secundario">14sp</dimen>
+    <dimen name="txt_listas_top_left">12sp</dimen>
 </resources>

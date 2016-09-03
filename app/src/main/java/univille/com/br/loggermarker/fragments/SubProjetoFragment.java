@@ -4,39 +4,44 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
-
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Toast;
 
+import java.util.Date;
 import java.util.List;
 
-import univille.com.br.loggermarker.adapter.InstalacaoAdapter;
-import univille.com.br.loggermarker.interfaces.RecyclerItemClickListener;
-import univille.com.br.loggermarker.model.Instalacao;
 import univille.com.br.loggermarker.R;
+import univille.com.br.loggermarker.adapter.ProjetoAdapter;
+import univille.com.br.loggermarker.adapter.SubProjetoAdapter;
+import univille.com.br.loggermarker.interfaces.RecyclerItemClickListener;
+import univille.com.br.loggermarker.model.Projeto;
+import univille.com.br.loggermarker.model.SubProjeto;
 import univille.com.br.loggermarker.util.ListasTeste;
+import univille.com.br.loggermarker.view.ActInstalacoes;
 import univille.com.br.loggermarker.view.ActSubProjeto;
 
 /**
  * Created by Jeferson Machado on 01/09/2016.
  */
-public class InstalacaoFragment extends Fragment {
+public class SubProjetoFragment extends Fragment{
 
     private RecyclerView mRecyclerView;
-    private static List<Instalacao> mList;
-    private static InstalacaoAdapter mAdapter;
+    private static List<SubProjeto> mList;
+    private static SubProjetoAdapter mAdapter;
+
 
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
 
+        //LAYOUT PADRÃO PARA INFLAR UMA LISTA
         View view = inflater.inflate(R.layout.fragment_padrao, container, false);
 
+        //ATRIBUI O ITEM RecyclerView do layout(rv_list)
         mRecyclerView = (RecyclerView) view.findViewById(R.id.rv_list);
         mRecyclerView.setHasFixedSize(true);
 
@@ -64,15 +69,14 @@ public class InstalacaoFragment extends Fragment {
 //            }
 //        });
 
-
-
+        //Instancia um novo LinearLayoutManager para setar a orientação dos item -> VERTICAL
         LinearLayoutManager llm = new LinearLayoutManager(getActivity());
         llm.setOrientation(LinearLayoutManager.VERTICAL);
         mRecyclerView.setLayoutManager(llm);
 
-        mList = ListasTeste.getInstalacoes(10);
-        Log.d("LOGG", String.valueOf(mList.size()));
-        mAdapter = new InstalacaoAdapter(getActivity(), mList);
+        //Recupera os Items(SubProjetos)
+        mList = ListasTeste.getSubProjetos(3);
+        mAdapter = new SubProjetoAdapter(getActivity(), mList);
         mRecyclerView.setAdapter( mAdapter );
 
         //CAPTURA DE CLIQUES NA LISTA
@@ -85,28 +89,35 @@ public class InstalacaoFragment extends Fragment {
 
                     @Override
                     public void onLongPressClick(View view, int position) {
-                        onItemLongClicado(position);
+
                     }
                 })
         );
-
 
 
         return view;
         //return super.onCreateView(inflater, container, savedInstanceState);
     }
 
+    public static void adicionarNovoSubProjeto(String nome){
+        SubProjeto sp = new SubProjeto();
+        sp.setSubProjetoNome(nome);
+        sp.setCdProjeto( (int) (1 + Math.random() * 101));
+        Date data = new Date(System.currentTimeMillis());
+
+        sp.setDataInicial(data);
+        mAdapter.addListItem(sp, mList.size());
+    }
+
+
     //Funcao de clique
     private void onItemClicado(int position){
-        Toast.makeText(getActivity(), "onItemClicado " + mAdapter.getItem(position).getNumCasa(), Toast.LENGTH_SHORT).show();
+        Toast.makeText(getActivity(), "Item " + mAdapter.getItem(position).getSubProjetoNome(), Toast.LENGTH_SHORT).show();
 
+        Intent intent = new Intent(getActivity(), ActInstalacoes.class);
+        intent.putExtra("NOME_PROJETO", getActivity().getIntent().getStringExtra("NOME_PROJETO"));
+
+        intent.putExtra("NOME_SUBPROJETO", mAdapter.getItem(position).getSubProjetoNome());
+        startActivity(intent);
     }
-
-
-    //Funcao de clique
-    private void  onItemLongClicado(int position){
-        Toast.makeText(getActivity(), "onItemLongClicado " + mAdapter.getItem(position).getNumCasa(), Toast.LENGTH_SHORT).show();
-    }
-
-
 }

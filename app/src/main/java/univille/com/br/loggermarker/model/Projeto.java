@@ -8,25 +8,21 @@ public class Projeto{
     private String nomeProjeto;
     private Date dataInicial;
     private Date dataFinal;
-    private String situacaoProjeto;
-    private int cdSubProjeto;
+    private int situacaoProjeto;
 
     public Projeto(){ }
 
-    public Projeto(int cdProjeto, String nomeProjeto, Date dataInicial, Date dataFinal, String situacaoProjeto, int cdSubProjeto) {
+      public Projeto(int cdProjeto, String nomeProjeto, Date dataInicial, Date dataFinal, int situacaoProjeto) {
         this.cdProjeto = cdProjeto;
         this.nomeProjeto = nomeProjeto;
         this.dataInicial = dataInicial;
         this.dataFinal = dataFinal;
         this.situacaoProjeto = situacaoProjeto;
-        this.cdSubProjeto = cdSubProjeto;
     }
 
+    public void setCdProjeto(int cdProjeto) { this.cdProjeto = cdProjeto;}
     public int getCdProjeto(){
         return cdProjeto;
-    }
-    public int getCdSubProjeto(){
-        return cdSubProjeto;
     }
 
     public String getNomeProjeto(){
@@ -50,8 +46,8 @@ public class Projeto{
         this.dataFinal = dataFinal;
     }
 
-    public String getSituacaoProjeto(){
+    public int getSituacaoProjeto(){
         return situacaoProjeto;
     }
-    public void setSituacaoProjeto(String situacaoProjeto){ this.situacaoProjeto = situacaoProjeto; }
+    public void setSituacaoProjeto(int situacaoProjeto){ this.situacaoProjeto = situacaoProjeto; }
 }

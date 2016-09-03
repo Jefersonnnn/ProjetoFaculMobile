@@ -4,32 +4,32 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
-
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Toast;
 
+import java.util.Date;
 import java.util.List;
 
-import univille.com.br.loggermarker.adapter.InstalacaoAdapter;
-import univille.com.br.loggermarker.interfaces.RecyclerItemClickListener;
-import univille.com.br.loggermarker.model.Instalacao;
 import univille.com.br.loggermarker.R;
+import univille.com.br.loggermarker.adapter.ProjetoAdapter;
+import univille.com.br.loggermarker.interfaces.RecyclerItemClickListener;
+import univille.com.br.loggermarker.model.Projeto;
 import univille.com.br.loggermarker.util.ListasTeste;
 import univille.com.br.loggermarker.view.ActSubProjeto;
 
 /**
  * Created by Jeferson Machado on 01/09/2016.
  */
-public class InstalacaoFragment extends Fragment {
+public class ProjetoFragment extends Fragment{
 
     private RecyclerView mRecyclerView;
-    private static List<Instalacao> mList;
-    private static InstalacaoAdapter mAdapter;
+    private static List<Projeto> mList;
+    private static ProjetoAdapter mAdapter;
+
 
     @Nullable
     @Override
@@ -70,9 +70,8 @@ public class InstalacaoFragment extends Fragment {
         llm.setOrientation(LinearLayoutManager.VERTICAL);
         mRecyclerView.setLayoutManager(llm);
 
-        mList = ListasTeste.getInstalacoes(10);
-        Log.d("LOGG", String.valueOf(mList.size()));
-        mAdapter = new InstalacaoAdapter(getActivity(), mList);
+        mList = ListasTeste.getProjetos(3);
+        mAdapter = new ProjetoAdapter(getActivity(), mList);
         mRecyclerView.setAdapter( mAdapter );
 
         //CAPTURA DE CLIQUES NA LISTA
@@ -91,22 +90,33 @@ public class InstalacaoFragment extends Fragment {
         );
 
 
-
         return view;
         //return super.onCreateView(inflater, container, savedInstanceState);
     }
 
+    public static void adicionarNovoProjeto(String nome){
+        Projeto p = new Projeto();
+        p.setNomeProjeto(nome);
+        p.setCdProjeto( (int) (1 + Math.random() * 101));
+        Date data = new Date(System.currentTimeMillis());
+
+        p.setDataInicial(data);
+        mAdapter.addListItem(p, mList.size());
+    }
+
+
     //Funcao de clique
     private void onItemClicado(int position){
-        Toast.makeText(getActivity(), "onItemClicado " + mAdapter.getItem(position).getNumCasa(), Toast.LENGTH_SHORT).show();
+        Toast.makeText(getActivity(), "onItemClicado " + mAdapter.getItem(position).getNomeProjeto(), Toast.LENGTH_SHORT).show();
 
+        Intent intent = new Intent(getActivity(), ActSubProjeto.class);
+        intent.putExtra("NOME_PROJETO", mAdapter.getItem(position).getNomeProjeto());
+        startActivity(intent);
     }
 
 
     //Funcao de clique
     private void  onItemLongClicado(int position){
-        Toast.makeText(getActivity(), "onItemLongClicado " + mAdapter.getItem(position).getNumCasa(), Toast.LENGTH_SHORT).show();
+        Toast.makeText(getActivity(), "onItemLongClicado " + mAdapter.getItem(position).getNomeProjeto(), Toast.LENGTH_SHORT).show();
     }
-
-
 }
