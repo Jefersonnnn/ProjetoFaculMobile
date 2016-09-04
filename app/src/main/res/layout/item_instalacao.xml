@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="8dp"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp">
+
+
+
+    <ImageView
+        android:layout_alignParentLeft="true"
+        android:layout_width="65dp"
+        android:layout_height="65dp"
+        android:layout_marginRight="6dp"
+        android:id="@+id/iv_instalacao"
+        android:src="@drawable/loggerinstalado"/>
+
+
+    <TextView
+        android:shadowColor="#0070a4"
+        android:shadowDx="1"
+        android:shadowDy="1"
+        android:shadowRadius="2"
+
+        android:id="@+id/tv_instalacaoNumLogger"
+        android:textColor="@color/primary_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingRight="16dp"
+        android:textSize="@dimen/txt_listas_principal"
+        android:text="232"
+        android:layout_centerVertical="true"
+        android:layout_toRightOf="@+id/iv_instalacao"
+        android:layout_toEndOf="@+id/iv_instalacao" />
+
+    <TextView
+        android:id="@+id/tv_instalacaoRua"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingRight="16dp"
+        android:textSize="@dimen/txt_listas_secundario"
+        android:textColor="@color/secondary_text"
+        android:text="Rua Aquarius, 1101"
+        android:layout_above="@+id/view"
+        android:layout_toRightOf="@+id/iv_instalacao"
+        android:layout_toEndOf="@+id/iv_instalacao" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.8dp"
+        android:layout_below="@+id/iv_instalacao"
+        android:layout_marginTop="8dp"
+        android:background="@color/primary_dark"
+        android:id="@+id/view" />
+
+</RelativeLayout>

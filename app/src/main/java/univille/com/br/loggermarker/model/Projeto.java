@@ -1,28 +1,33 @@
-public class Projeto{
+package univille.com.br.loggermarker.model;
 
-    public Projeto(){
-        
-    }
+import java.util.Date;
+
+public class Projeto{
 
     private int cdProjeto;
     private String nomeProjeto;
     private Date dataInicial;
     private Date dataFinal;
     private int situacaoProjeto;
-    private int cdSubProjeto;
 
-    public int getCdProjeto(){
-        return cdProjeto;
+    public Projeto(){ }
+
+      public Projeto(int cdProjeto, String nomeProjeto, Date dataInicial, Date dataFinal, int situacaoProjeto) {
+        this.cdProjeto = cdProjeto;
+        this.nomeProjeto = nomeProjeto;
+        this.dataInicial = dataInicial;
+        this.dataFinal = dataFinal;
+        this.situacaoProjeto = situacaoProjeto;
     }
 
-    public int getCdSubProjeto(){
-        return cdSubProjeto;
+    public void setCdProjeto(int cdProjeto) { this.cdProjeto = cdProjeto;}
+    public int getCdProjeto(){
+        return cdProjeto;
     }
 
     public String getNomeProjeto(){
         return nomeProjeto;
     }
-
     public void setNomeProjeto(String nomeProjeto){
         this.nomeProjeto = nomeProjeto;
     }
@@ -30,7 +35,6 @@ public class Projeto{
     public Date getDataInicial(){
         return dataInicial;
     }
-
     public void setDataInicial(Date dataInicial){
         this.dataInicial = dataInicial;
     }
@@ -38,7 +42,6 @@ public class Projeto{
     public Date getDataFinal(){
         return dataFinal;
     }
-
     public void setDataFinal(){
         this.dataFinal = dataFinal;
     }
@@ -46,8 +49,5 @@ public class Projeto{
     public int getSituacaoProjeto(){
         return situacaoProjeto;
     }
-
-    public void setSituacaoProjeto(int situacaoProjeto){
-        this.situacaoProjeto = situacaoProjeto;
-    }
+    public void setSituacaoProjeto(int situacaoProjeto){ this.situacaoProjeto = situacaoProjeto; }
 }

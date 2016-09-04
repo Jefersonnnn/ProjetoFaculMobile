@@ -12,8 +12,14 @@
     <string name="host">Host</string>
     <string name="porta">Porta</string>
     <string name="tabela">Tabela</string>
+    <string name="novoProjeto">Novo Projeto</string>
+    <string name="novoSubProjeto">Novo Sub Projeto</string>
     <string name="salvar">Salvar</string>
     <string name="config">Configuraçoes de servidor</string>
-
+    <string name="retirado">Retirado</string>
+    <string name="instalado">Instalado</string>
+    <string name="cancelar">cancelar</string>
+    <string name="adicionar_novo_projeto">Adicionar Novo Projeto</string>
+    <string name="adicionar_novo_sub_projeto">Adicionar novo Sub-Projeto</string>
 
 </resources>

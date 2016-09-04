@@ -1,0 +1,67 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/tv_tituloNovoProjeto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="@string/adicionar_novo_sub_projeto"
+        android:layout_gravity="center_horizontal" />
+
+    <EditText
+        android:id="@+id/edtNovoSubProjeto"
+        android:inputType="text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginLeft="4dp"
+        android:layout_marginRight="4dp"
+        android:layout_marginBottom="4dp"
+        android:hint="@string/novoSubProjeto" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+
+        <Button
+            android:id="@+id/btnCancelar"
+            android:text="@string/cancelar"
+            android:layout_marginBottom="@dimen/btn_margin_vertical"
+            android:layout_marginRight="@dimen/btn_margin_horizontal"
+            android:layout_marginLeft="@dimen/btn_margin_horizontal"
+            android:clickable="false"
+            android:theme="@style/MyButton"
+            android:elevation="@dimen/btn_elevation"
+            android:textStyle="bold"
+            android:layout_marginTop="4dp"
+            android:layout_width="wrap_content"
+            android:minWidth="@dimen/btn_min_width"
+            android:layout_height="@dimen/btn_height"
+            android:textSize="@dimen/btn_text_size"
+            android:gravity="center" />
+
+        <Button
+            android:layout_marginTop="4dp"
+            android:layout_width="wrap_content"
+            android:minWidth="@dimen/btn_min_width"
+            android:layout_height="@dimen/btn_height"
+            android:text="@string/salvar"
+            android:id="@+id/btnSalvar"
+            android:layout_marginBottom="@dimen/btn_margin_vertical"
+            android:layout_marginRight="@dimen/btn_margin_horizontal"
+            android:clickable="false"
+            android:theme="@style/MyButton"
+            android:shadowRadius="5"
+            android:textStyle="bold"
+            android:textSize="@dimen/btn_text_size"
+            android:gravity="center" />
+
+    </LinearLayout>
+
+</LinearLayout>

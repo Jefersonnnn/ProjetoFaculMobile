@@ -1,7 +1,7 @@
 -Loggers { LoggerCodigo, LoggerStatus}
--Projetos { ProjetoCodigo, SubprojetoCodigo, ProjetoNome, ProjetoDataInicial, ProjetoDataFinal, flSituacao}
--Subprojetos { SubprojetoCodigo, SubprojetoNome, InstalacaoCodigo, SubprojetoDataInicial, SubprojetoDataFinal, flSituacao}
--Instalaçoes { InstalacaoCodigo, LoggerCodigo, InstalacaoDataInicial, InstalacaoDataFinal, InstalacaoLatitude, InstalacaoLongitude, InstalacaoNumCasa, InstalacaoNomeRua, flSituacao, flVazamento, UsuarioCodigo}
+-Projetos { ProjetoCodigo, ProjetoNome, ProjetoDataInicial, ProjetoDataFinal, flSituacao}
+-Subprojetos { SubprojetoCodigo, SubprojetoNome, ProjetoCodigo, SubprojetoDataInicial, SubprojetoDataFinal, flSituacao}
+-InstalaÃ§oes { InstalacaoCodigo, LoggerCodigo, SubProjetoCodigo, InstalacaoDataInicial, InstalacaoDataFinal, InstalacaoLatitude, InstalacaoLongitude, InstalacaoNumCasa, InstalacaoNomeRua, flSituacao, flVazamento, UsuarioCodigo}
 -InstalacoesSituacoes {InstalacaoSituacaoCodigo, IntalacaoCodigo}
 -Usuarios { UsuarioCodigo, UsuarioMatricula, UsuarioLogin, UsuarioSenha }
 -LogsInstalacoes {cdLog, dsLog, }

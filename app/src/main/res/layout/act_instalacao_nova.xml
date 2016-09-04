@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:theme="@style/ToolbarTheme"
+            android:titleTextAppearance="@style/Toolbar.TitleText"
+            app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+    </android.support.design.widget.AppBarLayout>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:id="@+id/iVLogo"
+        android:src="@drawable/loggerinstalado"
+        android:layout_marginBottom="20dp"
+        android:layout_marginTop="20dp" />
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/input_layout_numLogger"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.8">
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:ems="10"
+            android:id="@+id/edtNumLogger"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="@dimen/btn_margin_vertical"
+            android:background="@color/edtText_background"
+            android:layout_weight="0.05"
+            android:layout_marginRight="@dimen/edtText_margin_horizontal"
+            android:layout_marginLeft="@dimen/edtText_margin_horizontal"
+            android:hint="Numero Logger"
+            android:textSize="25dp"
+            android:maxLines="1" />
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/input_layout_rua"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.8">
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="text"
+            android:ems="10"
+            android:id="@+id/edtRua"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="@dimen/btn_margin_vertical"
+            android:background="@color/edtText_background"
+            android:layout_weight="0.05"
+            android:layout_marginRight="@dimen/edtText_margin_horizontal"
+            android:layout_marginLeft="@dimen/edtText_margin_horizontal"
+            android:hint="Nome Rua"
+            android:textSize="25dp"
+            android:maxLines="1" />
+
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/input_layout_numCasa"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.8">
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPassword"
+            android:ems="10"
+            android:id="@+id/edtNumCasa"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="@dimen/btn_margin_vertical"
+            android:background="@color/edtText_background"
+            android:layout_weight="0.05"
+            android:layout_marginRight="@dimen/edtText_margin_horizontal"
+            android:layout_marginLeft="@dimen/edtText_margin_horizontal"
+            android:hint="Numero casa"
+            android:textSize="25dp"
+            android:maxLines="1" />
+
+    </android.support.design.widget.TextInputLayout>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:text="@string/salvar"
+        android:id="@+id/btnSalvar"
+        android:layout_marginBottom="@dimen/btn_margin_vertical"
+        android:layout_marginRight="@dimen/btn_margin_horizontal"
+        android:layout_marginLeft="@dimen/btn_margin_horizontal"
+        android:layout_weight="1"
+        android:clickable="false"
+        android:theme="@style/MyButton"
+        android:elevation="5dp"
+        android:shadowRadius="5"
+        android:textStyle="bold"
+        android:textSize="20dp" />
+
+</LinearLayout>

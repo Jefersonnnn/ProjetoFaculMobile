@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/item_loggerInstalado"
+        app:showAsAction="ifRoom|withText"
+        android:title="@string/instalado"
+        android:visible="true"/>
+
+    <item
+        android:id="@+id/item_loggerRetirado"
+        app:showAsAction="ifRoom|withText"
+        android:title="@string/retirado"
+        android:visible="true"
+        />
+
+    <item
+        android:id="@+id/item_loggerSuspeito"
+        app:showAsAction="ifRoom|withText"
+        android:title="Suspeito"
+        android:visible="true"
+        />
+
+    <item
+        android:id="@+id/item_loggerVazando"
+        app:showAsAction="ifRoom|withText"
+        android:title="Vazando"
+        android:visible="true"
+        />
+
+</menu>

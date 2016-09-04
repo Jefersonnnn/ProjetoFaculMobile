@@ -56,12 +56,19 @@
     </android.support.design.widget.TextInputLayout>
 
 
-
     <Button
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/btn_height"
+        android:minWidth="@dimen/btn_min_width"
+        android:text="@string/salvar"
         android:id="@+id/btnSalvar"
         android:layout_marginTop="4dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/salvar"/>
+        android:layout_marginBottom="@dimen/btn_margin_vertical"
+        android:layout_marginRight="@dimen/btn_margin_horizontal"
+        android:layout_marginLeft="@dimen/btn_margin_horizontal"
+        android:clickable="false"
+        android:theme="@style/MyButton"
+        android:shadowRadius="5"
+        android:textStyle="bold" />
 
 </LinearLayout>

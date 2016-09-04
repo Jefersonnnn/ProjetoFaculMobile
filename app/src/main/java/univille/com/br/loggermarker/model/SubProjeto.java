@@ -1,53 +1,75 @@
+package univille.com.br.loggermarker.model;
+
+import java.util.Date;
+
 public class SubProjeto{
 
-    public SubProjeto(){
-
-    }
-
     private int cdSubProjeto;
+    private int cdProjeto;
     private String subProjetoNome;
-    private int cdInstalacao;
     private Date dataInicial;
     private Date dataFinal;
     private int situacaoSubProjeto;
 
-    public int getCdSubProjeto(){
+    public SubProjeto(int cdSubProjeto, int cdProjeto, String subProjetoNome, Date dataInicial, Date dataFinal, int situacaoSubProjeto) {
+        this.cdSubProjeto = cdSubProjeto;
+        this.cdProjeto = cdProjeto;
+        this.subProjetoNome = subProjetoNome;
+        this.dataInicial = dataInicial;
+        this.dataFinal = dataFinal;
+        this.situacaoSubProjeto = situacaoSubProjeto;
+    }
+
+    public SubProjeto(){ }
+
+    public int getCdSubProjeto() {
         return cdSubProjeto;
     }
 
-    public String getSubProjetoNome(){
+    public void setCdSubProjeto(int cdSubProjeto) {
+        this.cdSubProjeto = cdSubProjeto;
+    }
+
+    public int getCdProjeto() {
+        return cdProjeto;
+    }
+
+    public void setCdProjeto(int cdProjeto) {
+        this.cdProjeto = cdProjeto;
+    }
+
+    public String getSubProjetoNome() {
         return subProjetoNome;
     }
 
-    public void setSubProjetoNome(String subProjetoNome){
+    public void setSubProjetoNome(String subProjetoNome) {
         this.subProjetoNome = subProjetoNome;
     }
 
-    public int getCdInstalacao(){
-        return cdInstalacao;
-    }
-
-    public Date getDataInicial(){
+    public Date getDataInicial() {
         return dataInicial;
     }
 
-    public void setDataInicial(Date dataInicial){
-        this.dataInicial = dataInicial
+    public void setDataInicial(Date dataInicial) {
+        this.dataInicial = dataInicial;
     }
 
-     public Date getDataFinal(){
+    public Date getDataFinal() {
         return dataFinal;
     }
 
-    public void setDataFinal(Date dataFinal){
-        this.dataFinal = dataFinal
+    public void setDataFinal(Date dataFinal) {
+        this.dataFinal = dataFinal;
     }
 
-    public int getSituacaoSubProjeto(){
+    public int getSituacaoSubProjeto() {
         return situacaoSubProjeto;
     }
 
-    public void setSituacaoSubProjeto(int situacaoSubProjeto){
+    public void setSituacaoSubProjeto(int situacaoSubProjeto) {
         this.situacaoSubProjeto = situacaoSubProjeto;
     }
+
+
+
 }
